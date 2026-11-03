@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intelligent-creation-workbench"
+version = "0.0.1a0"
+description = "Conversation-driven creation workbench: business contracts and bootstrap"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+api = ["fastapi==0.162.0", "uvicorn==0.54.0"]
+dev = [
+  "fastapi==0.162.0", "uvicorn==0.54.0", "httpx==0.28.1",
+  "build==1.6.1", "setuptools==84.2.1", "wheel==0.48.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.package-data]
+creation_workbench = ["py.typed"]

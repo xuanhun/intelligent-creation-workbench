@@ -1,0 +1,60 @@
+{
+  "schema": "creation-workbench-plan/v1",
+  "nextIteration": "G0-01",
+  "iterations": [
+    {
+      "id": "B00",
+      "title": "项目初始化",
+      "status": "complete",
+      "dependsOn": [],
+      "evidence": [
+        "docs/changes/20261103-B00.json"
+      ]
+    },
+    {
+      "id": "G0-01",
+      "title": "真实模型与 Runtime 验证",
+      "status": "planned",
+      "dependsOn": [
+        "B00"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "G1",
+      "title": "文章首个闭环",
+      "status": "planned",
+      "dependsOn": [
+        "G0-01"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "G2",
+      "title": "结构化视觉内容",
+      "status": "planned",
+      "dependsOn": [
+        "G1"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "G3",
+      "title": "视频与发布",
+      "status": "planned",
+      "dependsOn": [
+        "G2"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "G4",
+      "title": "团队与规模化",
+      "status": "planned",
+      "dependsOn": [
+        "G3"
+      ],
+      "evidence": []
+    }
+  ]
+}

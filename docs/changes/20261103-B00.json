@@ -1,0 +1,63 @@
+{
+  "schema": "creation-workbench-change/v1",
+  "id": "B00",
+  "date": "2026-11-03",
+  "scope": "Repository bootstrap only",
+  "g0Accepted": false,
+  "validationStatus": "passed",
+  "limitations": [
+    "No real model or SDK integration",
+    "No persistence or background workers",
+    "CI configured, not yet run remotely",
+    "Browser visual review not performed; frontend verified by build and HTTP proxy smoke",
+    "Python matrix and Linux installation await remote CI"
+  ],
+  "checks": [
+    {
+      "name": "offline-bootstrap",
+      "result": "pass",
+      "receipt": "test-runs/core-01/report.json",
+      "tests": 9
+    },
+    {
+      "name": "api-and-contracts",
+      "result": "pass",
+      "receipt": "test-runs/api-02/report.json",
+      "tests": 13
+    },
+    {
+      "name": "web-build",
+      "result": "pass",
+      "command": "npm run build",
+      "details": "TypeScript 7.0.2 and Vite 8.3.5; CSS declaration fixed after initial failure"
+    },
+    {
+      "name": "package-build",
+      "result": "pass",
+      "command": ".venv/Scripts/python -m build --no-isolation --outdir test-runs/package-01/dist"
+    },
+    {
+      "name": "installed-wheel",
+      "result": "pass",
+      "command": ".local/wheel-check/Scripts/python -I scripts/verify_installed_wheel.py"
+    },
+    {
+      "name": "http-and-web-proxy",
+      "result": "pass",
+      "receipt": "test-runs/http-smoke-01/report.json"
+    },
+    {
+      "name": "final-bootstrap-and-api",
+      "result": "pass",
+      "receipt": "test-runs/final-01/report.json",
+      "tests": 13
+    }
+  ],
+  "environment": {
+    "os": "Windows",
+    "python": "3.13.15",
+    "node": "24.19.0",
+    "npm": "11.17.0"
+  },
+  "wheelSha256": "c3e2d4d600b7d4235fe1f1b47ea4736354b62506bca6a020cd92624ef0cd3d34"
+}

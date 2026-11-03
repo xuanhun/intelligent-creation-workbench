@@ -1,0 +1,32 @@
+{
+  "schema": "creation-workbench-sources/v1",
+  "retrievedOn": "2026-11-03",
+  "shareUrl": "https://chatgpt.com/share/6ae9c555-9d64-83e8-820d-39899398522f",
+  "snapshots": [
+    {
+      "path": "references/technical-proposal.md",
+      "url": "https://chatgpt.com/space/page_e99edc1694448191929c401a9ff2dda2",
+      "sha256": "c1d91df0870f36a58dea5db4c4aa54644a7d4d5ff08862f578cd2a28babd8e0e",
+      "purpose": "Design baseline, not implementation acceptance"
+    }
+  ],
+  "infrastructureReference": {
+    "path": "C:/code/py-visactor/py-elk",
+    "gitHead": "01830431b621c04959120f8e992d8b08c9d5ca8d",
+    "scope": [
+      "AGENTS/new-session entry",
+      "src package layout",
+      "iteration and release status",
+      "fresh check receipts with source hashes",
+      "cross-platform CI"
+    ],
+    "copiedApplicationCode": false
+  },
+  "officialDocumentation": [
+    {
+      "url": "https://learn.chatgpt.com/docs/codex-sdk",
+      "checkedOn": "2026-11-03",
+      "purpose": "SDK boundary; integration deferred to G0-01"
+    }
+  ]
+}
